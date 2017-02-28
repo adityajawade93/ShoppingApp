@@ -1,0 +1,13 @@
+
+.thumbnail > a > img , .thumbnail > img{
+    max-height: 100px;
+}
+
+.thumbnail{
+    height: 280px;
+    width: 230px;
+}
+
+#category{
+    height: 150px;
+}

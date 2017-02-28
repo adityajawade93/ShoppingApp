@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+    <div class="jumbotron">
+        <h1><%= category.name %></h1>
+        <p>Our Selected products in <%= category.name %></p>
+    </div>
+    <div class="row">
+    <% category.items.forEach(function(item){ %>
+    <div class="col-md-4 clearfix">
+        <div class="thumbnail clearfix">
+            <a href="/categories/<%= category._id %>/items/<%= item._id %>"><img src="<%= item.imageUrl %>" class="img-responsive" alt="game cover image"></a>
+            <div class="caption">
+                <h3><%= item.name %></h3>
+            </div>
+            <p class="pull-left"><strong><%= item.price %> INR</strong></p>
+            <a class="btn btn-primary pull-right btn-xs" href="/add-to-cart/<%= item._id %>">Add To Cart</a>
+        </div>
+    </div>
+    <% }); %>
+    </div>
+<% include ../partials/footer %>
